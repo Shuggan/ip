@@ -104,7 +104,8 @@ public class TaskList {
         }
         Task t = new Task.Todo(parts[1].trim());
         taskList.add(t);
-        return String.format("Got it. I've added this task:\n%s\nNow you have %d tasks in the list", t, taskList.size());
+        return String.format(
+                "Got it. I've added this task:\n%s\nNow you have %d tasks in the list", t, taskList.size());
     }
 
     /**
@@ -116,7 +117,8 @@ public class TaskList {
     public String deadline(String... parts) {
         Task t = new Task.Deadline(parts[0].substring(9), parts[1].substring(3));
         taskList.add(t);
-        return String.format("Got it. I've added this task:\n%s\nNow you have %d tasks in the list", t, taskList.size());
+        return String.format(
+                "Got it. I've added this task:\n%s\nNow you have %d tasks in the list", t, taskList.size());
     }
 
     /**
@@ -128,7 +130,8 @@ public class TaskList {
     public String event(String... parts) {
         Task t = new Task.Event(parts[0].substring(6), parts[1].substring(5), parts[2].substring(3));
         taskList.add(t);
-        return String.format("Got it. I've added this task:\n%s\nNow you have %d tasks in the list", t, taskList.size());
+        return String.format(
+                "Got it. I've added this task:\n%s\nNow you have %d tasks in the list", t, taskList.size());
     }
 
     public String postpone(String... parts) throws DukeException {
